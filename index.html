@@ -1,44 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
+
   <title>Frontend Mentor | Tip calculator app</title>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
+    .attribution {
+      font-size: 11px;
+      text-align: center;
+    }
+
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
   </style>
 </head>
+
 <body>
+  <header class="logo">
+    <h1><img src="./images/logo.svg" alt="Splitter" /></h1>
+  </header>
+  <main>
+    <form class="user__input">
 
-  Bill
+      <form>
+        <div class="bill__info">
+          <label class="bill__title title" for="amount">bill</label>
+          <div class="bill__container">
+            <i class="bill__icon"></i>
+            <input type="number" id="amount" name="Amount to pay" placeholder="0" min="0" value="0" step="0.01" />
+          </div>
+        </div>
+        <div class="tip__info">
+          <label>select tip Tip %</label>
+          <div class="tip__title title">
+            <button button="btn" data-tip="5">5%</button>
+            <button button="btn" data-tip="10">10%</button>
+            <button button="btn" data-tip="15">15%</button>
+            <button button="btn" data-tip="25">25%</button>
+            <button button="btn" data-tip="50">50%</button>
+            <input id="custom" type="number" step="1" placeholder="Custom" />
+          </div>
+        </div>
+        <div class="people_number__info">
+          <label class="people_number__title title" for="people_number">Number of People</label>
+          <p id="warning" class="alert__info alert__info--hidden">Can't be zero</p>
+        </div>
+        <div class="people_number__container">
+          <i class="people_number__icon"></i>
+          <input type="number" id="people_number" name="Number of people" min="0" placeholder="0" />
 
-  Select Tip %
-  5%
-  10%
-  15%
-  25%
-  50%
-  Custom
+      </form>
+      <div class="user__output">
+        Tip Amount
+        / person
 
-  Number of People
+        Total
+        / person
 
-  Tip Amount
-  / person
+        Reset
 
-  Total
-  / person
+      </div>
+  </main>
 
-  Reset
-  
+
+
   <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
     Coded by <a href="#">Your Name Here</a>.
   </div>
 </body>
+
 </html>
