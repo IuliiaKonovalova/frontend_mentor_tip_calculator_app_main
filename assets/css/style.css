@@ -49,34 +49,51 @@ body {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 1.7rem;
-  padding: 1.7rem;
+  padding: 1.5rem;
   border-radius: var(--br);
 }
 
 /* User Input */
 .user__input {
   grid-column: 1/2;
-  background-color: pink;
+
   border-radius: var(--br);
-  padding: 2rem;
-  /* display: flex;
-  flex-direction: column;
-  justify-content: space-around; */
+  padding: 1rem;
   display: grid;
-  grid-template-rows: 1fr 1.5fr 1fr;
-  gap: 0.5rem;
+  grid-template-rows: 1fr 2fr 1fr;
+  gap: 1.7rem;
+}
+
+/**/
+.bill__info {
+  grid-row: 1/2;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
 }
 
 .title {
   font-weight: 600;
+  padding-bottom: 1rem;
 }
 
+.bill__container {
+  position: relative;
+}
 
+.bill__icon {
+  content: url("../images/icon-dollar.svg");
+  position: absolute;
+  top: 50%;
+  left: 4%;
+  transform: translateY(-50%);
+}
 
-
-
-.title {
-  font-weight: 600;
+.tip__info {
+  grid-row: 2/3;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
 }
 
 .tip__btns {
@@ -97,18 +114,16 @@ body {
   border: none
 }
 
-
-.bill__container {
-  position: relative;
+.btn--input {
+  background: var(--clr-primary--100);
+  color: var(--clr-neutral--300);
+  font-weight: 300;
+  font-size: 1.6rem;
+  text-align: center;
 }
 
-.bill__icon {
-  content: url("../images/icon-dollar.svg");
-  position: absolute;
-  top: 50%;
-  left: 5%;
-  transform: translateY(-50%);
-}
+
+
 
 .people_number__container {
   position: relative;
@@ -118,7 +133,7 @@ body {
   content: url("../images/icon-person.svg");
   position: absolute;
   top: 50%;
-  left: 5%;
+  left: 4%;
   transform: translateY(-50%);
 }
 
@@ -137,25 +152,16 @@ input {
 input::placeholder {
   color: var(--clr-neutral--300);
   font-weight: 700;
-  font-size: 2rem;
 }
 
 input:placeholder-shown {
-  /* background: var(--clr-primary--100); */
   color: var(--clr-primary--900);
-  /* padding: 0.22rem; */
   font-weight: 700;
-  font-size: 2rem;
-  border-radius: 0.2em;
-
-
 }
 
 input:not(:placeholder-shown) {
-  color: var(--clr-primary-900);
-  font-weight: bold;
-  letter-spacing: 0.1rem;
-
+  color: hsl(183, 100%, 15%);
+  font-weight: 700;
 }
 
 input:focus {
@@ -163,6 +169,16 @@ input:focus {
 }
 
 
+.people_number__info {
+  grid-row: 3/4;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.alert__info--hidden {
+  display: none;
+}
 
 
 /* User Output */
