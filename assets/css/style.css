@@ -7,6 +7,7 @@
   --clr-primary--700: hsl(172, 67%, 45%);
   --clr-primary--900: hsl(183, 100%, 15%);
   --clr-neutral--100: hsl(0, 0%, 100%);
+  --clr-neutral--300: hsl(182, 17%, 67%);
   --ff-primary: 'Space Mono', monospace;
   --br: 1em;
 }
@@ -58,19 +59,24 @@ body {
   background-color: pink;
   border-radius: var(--br);
   padding: 2rem;
+  /* display: flex;
+  flex-direction: column;
+  justify-content: space-around; */
+  display: grid;
+  grid-template-rows: 1fr 1.5fr 1fr;
+  gap: 0.5rem;
+}
 
+.title {
+  font-weight: 600;
 }
 
 
 
 
-input {
-  font-size: 2rem;
-  padding: 0.22rem;
-  width: 100%;
-  border-radius: 0.2em;
-  text-align: center;
-  /* border: 2px solid var(--clr-neutral-900); */
+
+.title {
+  font-weight: 600;
 }
 
 .tip__btns {
@@ -91,35 +97,70 @@ input {
   border: none
 }
 
-input:placeholder-shown {
-  background: var(--clr-primary--100);
-  padding: 0.22rem;
-  font-weight: 700;
-  font-size: 2rem;
-  border-radius: 0.2em;
-  border: none;
-  text-align: right;
-}
 
 .bill__container {
   position: relative;
 }
 
-/* input::placeholder {
-  color: var(--clr-primary--900);
+.bill__icon {
+  content: url("../images/icon-dollar.svg");
+  position: absolute;
+  top: 50%;
+  left: 5%;
+  transform: translateY(-50%);
+}
+
+.people_number__container {
+  position: relative;
+}
+
+.people_number__icon {
+  content: url("../images/icon-person.svg");
+  position: absolute;
+  top: 50%;
+  left: 5%;
+  transform: translateY(-50%);
+}
+
+input {
+  font-size: 1.6rem;
+  padding-right: 3%;
+  width: 100%;
+  border-radius: 0.2em;
+  text-align: right;
+  border: none;
+  font-family: var(--ff-primary);
+  background: var(--clr-primary--100);
+  font-weight: 300;
+}
+
+input::placeholder {
+  color: var(--clr-neutral--300);
   font-weight: 700;
   font-size: 2rem;
 }
 
+input:placeholder-shown {
+  /* background: var(--clr-primary--100); */
+  color: var(--clr-primary--900);
+  /* padding: 0.22rem; */
+  font-weight: 700;
+  font-size: 2rem;
+  border-radius: 0.2em;
+
+
+}
+
 input:not(:placeholder-shown) {
-  color: var(--clr-neutral-900);
+  color: var(--clr-primary-900);
   font-weight: bold;
   letter-spacing: 0.1rem;
+
 }
 
 input:focus {
   outline: none;
-} */
+}
 
 
 
