@@ -29,7 +29,6 @@
   </header>
   <main>
     <form class="user__input">
-
       <form>
         <div class="bill__info">
           <label class="bill__title title" for="amount">bill</label>
@@ -59,14 +58,21 @@
 
       </form>
       <div class="user__output">
-        Tip Amount
-        / person
-
-        Total
-        / person
-
-        Reset
-
+        <div class="tip_result">
+          <div class="tip_result--title result">
+            <div class="result--main">tip amount</div>
+            <div class="result--per_person">/ person</div>
+          </div>
+          <div class="sum__result tip__amount">$0.00</div>
+        </div>
+        <div class="tip_result">
+          <div class="total_result--title result">
+            <div class="result--main">total</div>
+            <div class="result--per_person">/ person</div>
+          </div>
+          <div class="sum__result total__amount">$0.00</div>
+        </div>
+        <div class="btn btn--reset"></div>
       </div>
   </main>
 
