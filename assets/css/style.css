@@ -28,3 +28,15 @@ p {
   margin: 0;
   padding: 0;
 }
+
+body {
+  background-color: var(--clr-primary--300);
+  color: var(--clr-primary--500);
+  font-family: var(--ff-primary);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  position: relative;
+}
