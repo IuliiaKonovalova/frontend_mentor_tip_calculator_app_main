@@ -34,34 +34,33 @@
 
     <!--User input with options to choose from-->
     <div class="user__input">
-      <form>
-        <div class="bill__info">
-          <label class="bill__title title" for="amount">bill</label>
-          <div class="bill__container">
-            <i class="bill__icon"></i>
-            <input type="number" id="amount" name="Amount to pay" placeholder="0" min="0" value="0" step="0.01" />
-          </div>
+      <div class="bill__info">
+        <label class="bill__title title" for="amount">Bill</label>
+        <div class="bill__container">
+          <i class="bill__icon"></i>
+          <input type="number" id="amount" name="Amount to pay" placeholder="0" min="0" value="0" step="0.01" />
         </div>
-        <div class="tip__info">
-          <label>select tip Tip %</label>
-          <div class="tip__title title">
-            <button class='btn' button="btn" data-tip="5">5%</button>
-            <button class='btn' button="btn" data-tip="10">10%</button>
-            <button class='btn' button="btn" data-tip="15">15%</button>
-            <button class='btn' button="btn" data-tip="25">25%</button>
-            <button class='btn' button="btn" data-tip="50">50%</button>
-            <input id="custom" type="number" step="1" placeholder="Custom" />
-          </div>
+      </div>
+      <div class="tip__info">
+        <label class="tip__title title" for="custom">Select tip Tip %</label>
+        <div class="tip__btns">
+          <button class='btn' button="btn" data-tip="5">5%</button>
+          <button class='btn' button="btn" data-tip="10">10%</button>
+          <button class='btn' button="btn" data-tip="15">15%</button>
+          <button class='btn' button="btn" data-tip="25">25%</button>
+          <button class='btn' button="btn" data-tip="50">50%</button>
+          <input class='btn' id="custom" type="number" step="1" placeholder="Custom" />
         </div>
-        <div class="people_number__info">
-          <label class="people_number__title title" for="people_number">Number of People</label>
-          <p id="warning" class="alert__info alert__info--hidden">Can't be zero</p>
-        </div>
+      </div>
+      <div class="people_number__info">
+        <label class="people_number__title title" for="people_number">Number of People</label>
+        <p id="warning" class="alert__info alert__info--hidden">Can't be zero</p>
         <div class="people_number__container">
           <i class="people_number__icon"></i>
           <input type="number" id="people_number" name="Number of people" min="0" placeholder="0" />
         </div>
-      </form>
+      </div>
+
     </div>
     <!--User output with reset button-->
     <div class="user__output">

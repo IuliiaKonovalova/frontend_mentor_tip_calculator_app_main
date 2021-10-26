@@ -47,8 +47,8 @@ body {
   background-color: var(--clr-neutral--100);
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 1rem;
-  padding: 1rem;
+  gap: 1.7rem;
+  padding: 1.7rem;
   border-radius: var(--br);
 }
 
@@ -60,6 +60,69 @@ body {
   padding: 2rem;
 
 }
+
+
+
+
+input {
+  font-size: 2rem;
+  padding: 0.22rem;
+  width: 100%;
+  border-radius: 0.2em;
+  text-align: center;
+  /* border: 2px solid var(--clr-neutral-900); */
+}
+
+.tip__btns {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(2rem, 1fr));
+  gap: 1rem;
+}
+
+.btn {
+  background-color: var(--clr-primary--900);
+  width: 7.5rem;
+  padding: 0.22rem;
+  color: var(--clr-neutral--100);
+  font-weight: 600;
+  font-size: 1.7rem;
+  font-family: var(--ff-primary);
+  border-radius: 0.2em;
+  border: none
+}
+
+input:placeholder-shown {
+  background: var(--clr-primary--100);
+  padding: 0.22rem;
+  font-weight: 700;
+  font-size: 2rem;
+  border-radius: 0.2em;
+  border: none;
+  text-align: right;
+}
+
+.bill__container {
+  position: relative;
+}
+
+/* input::placeholder {
+  color: var(--clr-primary--900);
+  font-weight: 700;
+  font-size: 2rem;
+}
+
+input:not(:placeholder-shown) {
+  color: var(--clr-neutral-900);
+  font-weight: bold;
+  letter-spacing: 0.1rem;
+}
+
+input:focus {
+  outline: none;
+} */
+
+
+
 
 /* User Output */
 .user__output {
