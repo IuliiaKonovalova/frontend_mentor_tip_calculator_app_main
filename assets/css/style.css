@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap');
+
 :root {
   --clr-primary--100: hsl(189, 41%, 97%);
   --clr-primary--300: hsl(185, 41%, 84%);
@@ -5,4 +7,6 @@
   --clr-primary--700: hsl(172, 67%, 45%);
   --clr-primary--900: hsl(183, 100%, 15%);
   --clr-neutral--100: hsl(0, 0%, 100%);
+  --ff-primary: 'Space Mono', monospace;
+  --br: 1em;
 }
