@@ -40,3 +40,26 @@ body {
   height: 100vh;
   position: relative;
 }
+
+.container {
+  background-color: var(--clr-neutral--100);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  padding: 1rem;
+  border-radius: var(--br);
+}
+
+.user__input {
+  grid-column: 1/2;
+  background-color: pink;
+  border-radius: var(--br);
+  padding: 2rem;
+}
+
+.user__output {
+  grid-column: 2/3;
+  background-color: var(--clr-primary--900);
+  border-radius: var(--br);
+  padding: 2rem;
+}

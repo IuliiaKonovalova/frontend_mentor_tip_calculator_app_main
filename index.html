@@ -30,10 +30,10 @@
   </header>
 
   <!--main part container-->
-  <main>
+  <main class="container">
 
     <!--User input with options to choose from-->
-    <form class="user__input">
+    <div class="user__input">
       <form>
         <div class="bill__info">
           <label class="bill__title title" for="amount">bill</label>
@@ -60,26 +60,27 @@
         <div class="people_number__container">
           <i class="people_number__icon"></i>
           <input type="number" id="people_number" name="Number of people" min="0" placeholder="0" />
+        </div>
       </form>
-
-      <!--User output with reset button-->
-      <div class="user__output">
-        <div class="tip_result">
-          <div class="tip_result--title result">
-            <div class="result--main">tip amount</div>
-            <div class="result--per_person">/ person</div>
-          </div>
-          <div class="sum__result tip__amount">$0.00</div>
+    </div>
+    <!--User output with reset button-->
+    <div class="user__output">
+      <div class="tip_result">
+        <div class="tip_result--title result">
+          <div class="result--main">tip amount</div>
+          <div class="result--per_person">/ person</div>
         </div>
-        <div class="tip_result">
-          <div class="total_result--title result">
-            <div class="result--main">total</div>
-            <div class="result--per_person">/ person</div>
-          </div>
-          <div class="sum__result total__amount">$0.00</div>
-        </div>
-        <div class="btn btn--reset"></div>
+        <div class="sum__result tip__amount">$0.00</div>
       </div>
+      <div class="tip_result">
+        <div class="total_result--title result">
+          <div class="result--main">total</div>
+          <div class="result--per_person">/ person</div>
+        </div>
+        <div class="sum__result total__amount">$0.00</div>
+      </div>
+      <div class="btn btn--reset"></div>
+    </div>
   </main>
 
 
