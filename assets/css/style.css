@@ -64,7 +64,7 @@ body {
   gap: 1.7rem;
 }
 
-/**/
+/* Styling the bill info section*/
 .bill__info {
   grid-row: 1/2;
   display: flex;
@@ -89,6 +89,7 @@ body {
   transform: translateY(-50%);
 }
 
+/* Styling the tip info section*/
 .tip__info {
   grid-row: 2/3;
   display: flex;
@@ -122,9 +123,7 @@ body {
   text-align: center;
 }
 
-
-
-
+/* Styling the number of people section*/
 .people_number__container {
   position: relative;
 }
