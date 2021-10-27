@@ -243,12 +243,15 @@ input:focus {
 
 .result--main {
   color: var(--clr-neutral--100);
+  text-transform: capitalize;
 }
 
 .sum__result {
   color: var(--clr-primary--700);
   font-size: 3rem;
 }
+
+/* Styling reset btn */
 
 .btn--reset {
   grid-row: 3/4;
@@ -258,4 +261,8 @@ input:focus {
   width: 100%;
   color: var(--clr-primary--900);
   text-transform: uppercase;
+}
+
+.btn--reset:hover {
+  background-color: var(--clr-primary--700);
 }
