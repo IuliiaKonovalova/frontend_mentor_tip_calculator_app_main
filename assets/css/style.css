@@ -222,4 +222,21 @@ input:focus {
   background-color: var(--clr-primary--900);
   border-radius: var(--br);
   padding: 2rem;
+  display: grid;
+  grid-template-rows: 1fr 1fr 2fr;
+}
+
+.tip_result--person {
+  grid-row: 1/2;
+  justify-self: start;
+}
+
+.tip_result--total {
+  grid-row: 2/3;
+}
+
+.btn--reset {
+  grid-row: 3/4;
+  justify-self: center;
+  align-self: end;
 }
