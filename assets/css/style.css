@@ -56,7 +56,6 @@ body {
 /* User Input */
 .user__input {
   grid-column: 1/2;
-
   border-radius: var(--br);
   padding: 1rem;
   display: grid;
@@ -87,6 +86,41 @@ body {
   top: 50%;
   left: 4%;
   transform: translateY(-50%);
+}
+
+input {
+  font-size: 1.6rem;
+  padding-right: 3%;
+  width: 100%;
+  border-radius: 0.2em;
+  text-align: right;
+  border: none;
+  font-family: var(--ff-primary);
+  background: var(--clr-primary--100);
+  font-weight: 300;
+}
+
+input:hover {
+  outline: 3px solid #a0e7df;
+}
+
+input::placeholder {
+  color: var(--clr-neutral--300);
+  font-weight: 700;
+}
+
+input:placeholder-shown {
+  color: var(--clr-primary--900);
+  font-weight: 700;
+}
+
+input:not(:placeholder-shown) {
+  color: hsl(183, 100%, 15%);
+  font-weight: 700;
+}
+
+input:focus {
+  outline: none;
 }
 
 /* Styling the tip info section*/
@@ -130,7 +164,7 @@ body {
 
 .btn--input:hover {
   background: var(--clr-neutral--100);
-  border: 3px solid #a0e7df;
+  outline: 3px solid #a0e7df;
   text-align: right;
   padding-right: 6%;
 }
@@ -148,36 +182,7 @@ body {
   transform: translateY(-50%);
 }
 
-input {
-  font-size: 1.6rem;
-  padding-right: 3%;
-  width: 100%;
-  border-radius: 0.2em;
-  text-align: right;
-  border: none;
-  font-family: var(--ff-primary);
-  background: var(--clr-primary--100);
-  font-weight: 300;
-}
 
-input::placeholder {
-  color: var(--clr-neutral--300);
-  font-weight: 700;
-}
-
-input:placeholder-shown {
-  color: var(--clr-primary--900);
-  font-weight: 700;
-}
-
-input:not(:placeholder-shown) {
-  color: hsl(183, 100%, 15%);
-  font-weight: 700;
-}
-
-input:focus {
-  outline: none;
-}
 
 
 .people_number__info {
