@@ -8,6 +8,7 @@
   --clr-primary--900: hsl(183, 100%, 15%);
   --clr-neutral--100: hsl(0, 0%, 100%);
   --clr-neutral--300: hsl(182, 17%, 67%);
+  --clr-accent--100: #dc8f78;
   --ff-primary: 'Space Mono', monospace;
   --br: 1em;
 }
@@ -139,7 +140,7 @@ input:focus {
 
 .btn {
   background-color: var(--clr-primary--900);
-  width: 7.2rem;
+  width: 7.5rem;
   padding: 0.22rem;
   color: var(--clr-neutral--100);
   font-weight: 600;
@@ -195,12 +196,25 @@ input:focus {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+  position: relative;
 }
 
 .alert__info--hidden {
   display: none;
 }
 
+/* .input--hidden:hover {
+  border: 3px solid var(--clr-accent--100);
+} */
+
+
+.alert__info {
+  position: absolute;
+  right: 0;
+  top: 0;
+  font-weight: 800;
+  color: var(--clr-accent--100);
+}
 
 /* User Output */
 .user__output {
