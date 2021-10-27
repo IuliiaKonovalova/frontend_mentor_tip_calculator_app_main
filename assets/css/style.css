@@ -94,14 +94,14 @@ input {
   width: 100%;
   border-radius: 0.2em;
   text-align: right;
-  border: none;
+  border: 3px solid var(--clr-primary--100);
   font-family: var(--ff-primary);
   background: var(--clr-primary--100);
   font-weight: 300;
 }
 
 input:hover {
-  outline: 3px solid #a0e7df;
+  border: 3px solid #a0e7df;
 }
 
 input::placeholder {
@@ -139,7 +139,7 @@ input:focus {
 
 .btn {
   background-color: var(--clr-primary--900);
-  width: 7.5rem;
+  width: 7.2rem;
   padding: 0.22rem;
   color: var(--clr-neutral--100);
   font-weight: 600;
@@ -154,6 +154,10 @@ input:focus {
   color: var(--clr-primary--900);
 }
 
+.tip__btns input:placeholder-shown {
+  text-align: center;
+}
+
 .btn--input {
   background: var(--clr-primary--100);
   color: var(--clr-neutral--300);
@@ -164,6 +168,7 @@ input:focus {
 
 .btn--input:hover {
   background: var(--clr-neutral--100);
+  border: none;
   outline: 3px solid #a0e7df;
   text-align: right;
   padding-right: 6%;
