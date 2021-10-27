@@ -221,7 +221,7 @@ input:focus {
   grid-column: 2/3;
   background-color: var(--clr-primary--900);
   border-radius: var(--br);
-  padding: 2rem;
+  padding: 2.2rem;
   display: grid;
   grid-template-rows: 1fr 1fr 2fr;
 }
@@ -239,4 +239,7 @@ input:focus {
   grid-row: 3/4;
   justify-self: center;
   align-self: end;
+  background-color: #0d686d;
+  width: 100%;
+  color: var(--clr-primary--900)
 }
