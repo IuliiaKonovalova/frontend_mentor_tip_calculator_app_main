@@ -224,6 +224,7 @@ input:focus {
   padding: 2.2rem;
   display: grid;
   grid-template-rows: 1fr 1fr 2fr;
+  font-weight: 700;
 }
 
 .tip_result--person {
@@ -238,13 +239,14 @@ input:focus {
   display: flex;
   justify-content: space-between;
   align-self: center;
-  color: #dc8f78;
+}
+
+.result--main {
+  color: var(--clr-neutral--100);
 }
 
 .sum__result {
-  /* background-color: aquamarine; */
   color: var(--clr-primary--700);
-  font-weight: 700;
   font-size: 3rem;
 }
 
@@ -254,5 +256,6 @@ input:focus {
   align-self: end;
   background-color: #0d686d;
   width: 100%;
-  color: var(--clr-primary--900)
+  color: var(--clr-primary--900);
+  text-transform: uppercase;
 }
