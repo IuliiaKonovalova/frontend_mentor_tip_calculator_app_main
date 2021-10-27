@@ -115,6 +115,11 @@ body {
   border: none
 }
 
+.btn:hover {
+  background-color: #a0e7df;
+  color: var(--clr-primary--900);
+}
+
 .btn--input {
   background: var(--clr-primary--100);
   color: var(--clr-neutral--300);
