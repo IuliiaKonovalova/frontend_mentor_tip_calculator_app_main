@@ -228,11 +228,24 @@ input:focus {
 
 .tip_result--person {
   grid-row: 1/2;
-  justify-self: start;
 }
 
 .tip_result--total {
   grid-row: 2/3;
+}
+
+.tip_result {
+  display: flex;
+  justify-content: space-between;
+  align-self: center;
+  color: #dc8f78;
+}
+
+.sum__result {
+  /* background-color: aquamarine; */
+  color: var(--clr-primary--700);
+  font-weight: 700;
+  font-size: 3rem;
 }
 
 .btn--reset {
