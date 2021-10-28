@@ -35,21 +35,21 @@
     <!--User input with options to choose from-->
     <div class="user__input">
       <div class="bill__info">
-        <label class="bill__title title" for="amount">Bill</label>
+        <label class="bill__title title" for="bill__number">Bill</label>
         <div class="bill__container">
           <i class="bill__icon"></i>
-          <input type="number" id="amount" name="Amount to pay" min="0" step="0.01" placeholder="0" />
+          <input type="number" id="bill__number" name="Amount to pay" min="0" step="0.01" placeholder="0" />
         </div>
       </div>
       <div class="tip__info">
-        <label class="tip__title title" for="custom">Select tip Tip %</label>
+        <label class="tip__title title" for="tip__number_custom">Select tip Tip %</label>
         <div class="tip__btns">
-          <button class='btn' data-tip="5">5%</button>
-          <button class='btn' data-tip="10">10%</button>
-          <button class='btn' data-tip="15">15%</button>
-          <button class='btn' data-tip="25">25%</button>
-          <button class='btn' data-tip="50">50%</button>
-          <input class='btn btn--input' id="custom" type="number" step="1" placeholder="Custom" />
+          <button class='btn' id="tip__number_5">5%</button>
+          <button class='btn' id="tip__number_10">10%</button>
+          <button class='btn' id="tip__number_15">15%</button>
+          <button class='btn' id="tip__number_25">25%</button>
+          <button class='btn' id="tip__number_50">50%</button>
+          <input class='btn btn--input' id="tip__number_custom" type="number" step="1" placeholder="Custom" />
         </div>
       </div>
       <div class="people_number__info">
