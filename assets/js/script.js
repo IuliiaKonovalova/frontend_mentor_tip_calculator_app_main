@@ -49,10 +49,11 @@ function countBill() {
   return (billNumber)
 }
 
+/**
+ * Check whether people's number is legible
+ */
 function countPeople() {
-  if (!integer.test(peopleNumber.value) && peopleNumber.value !== '0') {
-    console.log('hi')
-  } else if (peopleNumber.value === '0') {
+  if (peopleNumber.value === '0') {
     warningMessage.classList.remove('alert__info--hidden')
     document.querySelector('.input--hidden').style.border = '3px solid #dc8f78'
   } else {
