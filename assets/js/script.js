@@ -8,4 +8,10 @@ const tipNumber15 = document.querySelector('#tip__number_15');
 const tipNumber25 = document.querySelector('#tip__number_25');
 const tipNumber50 = document.querySelector('#tip__number_50');
 const peopleNumber = document.querySelector('#people_number');
-const btnReset = document.querySelector('#btn__reset')
+const btnReset = document.querySelector('#btn__reset');
+
+
+billNumber.addEventListener('input', countBill);
+tipNumberCustom.addEventListener('input', countTipCustom);
+peopleNumber.addEventListener('input', countPeople);
+btnReset.addEventListener('click', resetAll);
