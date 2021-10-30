@@ -13,22 +13,32 @@ const btnReset = document.querySelector('#btn__reset');
 
 const warningMessage = document.querySelector('#warning')
 
+
+document.addEventListener('DOMContentLoaded', function () {
+  // Reset all inputs
+  resetAll();
+  // Event listeners for all buttons
+  billNumber.addEventListener('input', countBill);
+  tipNumberCustom.addEventListener('input', countTipCustom);
+  peopleNumber.addEventListener('input', countPeople);
+  btnReset.addEventListener('click', resetAll);
+  btnsTipNumber.forEach((btnTipNumber) =>
+    btnTipNumber.addEventListener('click', (e) => {
+      e.preventDefault();
+      selectedTip = Number.parseInt(e.target.dataset.tip);
+      // console.log(e.target.dataset.tip + " event target");
+      // console.log(selectedTip + " selected TIP");
+    })
+  )
+
+});
+
 const integer = /\d{1,}/;
-billNumber.addEventListener('input', countBill);
-tipNumberCustom.addEventListener('input', countTipCustom);
-peopleNumber.addEventListener('input', countPeople);
-btnReset.addEventListener('click', resetAll);
+
 
 let selectedTip = 0;
 
-btnsTipNumber.forEach((btnTipNumber) =>
-  btnTipNumber.addEventListener('click', (e) => {
-    e.preventDefault();
-    selectedTip = Number.parseInt(e.target.dataset.tip);
-    // console.log(e.target.dataset.tip + " event target");
-    // console.log(selectedTip + " selected TIP");
-  })
-)
+
 
 function countBill() {
   if (!integer.test(billNumber.value) && billNumber.value !== '0') {
@@ -59,7 +69,7 @@ function countTipCustom() {
 
 function resetAll() {
   billNumber.value = '';
-  tipNumberCustom = '';
-  peopleNumber = '';
+  // tipNumberCustom = '';
+  // peopleNumber = '';
   selectedTip = 0;
 }
