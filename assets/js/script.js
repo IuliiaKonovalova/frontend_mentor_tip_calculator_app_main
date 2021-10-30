@@ -69,7 +69,7 @@ function countTipCustom() {
 
 function resetAll() {
   billNumber.value = '';
-  // tipNumberCustom = '';
-  // peopleNumber = '';
+  tipNumberCustom.value = '';
+  peopleNumber.value = '';
   selectedTip = 0;
 }
