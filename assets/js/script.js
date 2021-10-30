@@ -11,6 +11,8 @@ const tipNumber50 = document.querySelector('#tip__number_50');
 const peopleNumber = document.querySelector('#people_number');
 const btnReset = document.querySelector('#btn__reset');
 
+const warningMessage = document.querySelector('#warning')
+
 const integer = /\d{1,}/;
 billNumber.addEventListener('input', countBill);
 // tipNumberCustom.addEventListener('input', countTipCustom);
