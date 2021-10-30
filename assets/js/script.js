@@ -15,9 +15,9 @@ const warningMessage = document.querySelector('#warning')
 
 const integer = /\d{1,}/;
 billNumber.addEventListener('input', countBill);
-// tipNumberCustom.addEventListener('input', countTipCustom);
+tipNumberCustom.addEventListener('input', countTipCustom);
 peopleNumber.addEventListener('input', countPeople);
-// btnReset.addEventListener('click', resetAll);
+btnReset.addEventListener('click', resetAll);
 
 let selectedTip = 0;
 
@@ -49,4 +49,17 @@ function countPeople() {
     warningMessage.classList.add('alert__info--hidden')
     document.querySelector('.input--hidden').style.border = '3px solid #a0e7df'
   }
+}
+
+function countTipCustom() {
+  if (tipNumberCustom.value > '100') {
+
+  }
+}
+
+function resetAll() {
+  billNumber.value = '';
+  tipNumberCustom = '';
+  peopleNumber = '';
+  selectedTip = 0;
 }
