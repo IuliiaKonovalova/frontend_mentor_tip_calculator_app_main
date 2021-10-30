@@ -11,10 +11,10 @@ const tipNumber50 = document.querySelector('#tip__number_50');
 const peopleNumber = document.querySelector('#people_number');
 const btnReset = document.querySelector('#btn__reset');
 
-
-// billNumber.addEventListener('input', countBill);
+const integer = /\d{1,}/;
+billNumber.addEventListener('input', countBill);
 // tipNumberCustom.addEventListener('input', countTipCustom);
-// peopleNumber.addEventListener('input', countPeople);
+peopleNumber.addEventListener('input', countPeople);
 // btnReset.addEventListener('click', resetAll);
 
 let selectedTip = 0;
@@ -27,3 +27,21 @@ btnsTipNumber.forEach((btnTipNumber) =>
     // console.log(selectedTip + " selected TIP");
   })
 )
+
+function countBill() {
+  if (!integer.test(billNumber.value) && billNumber.value !== '0') {
+    console.log('hi')
+  } else if (billNumber.value === '0') {
+    console.log('not 0')
+  }
+  return (billNumber)
+}
+
+function countPeople() {
+  if (!integer.test(peopleNumber.value) && peopleNumber.value !== '0') {
+    console.log('hi')
+  } else if (peopleNumber.value === '0') {
+
+
+  }
+}
