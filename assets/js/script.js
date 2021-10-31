@@ -25,13 +25,20 @@ document.addEventListener('DOMContentLoaded', function () {
   tipNumberCustom.addEventListener('input', countTipCustom);
   peopleNumber.addEventListener('input', countPeople);
   btnReset.addEventListener('click', resetAll);
-
+  checking()
 });
 
 const integer = /\d{1,}/;
 
+let bill = false
+let people = false
+let tip = false
 
-let selectedTip = '';
+let peopleNum = 0
+let tipNum = 0
+let billNum = 0
+
+let selectedTip = 0;
 
 btnsTipNumber.forEach((btnTipNumber) =>
   btnTipNumber.addEventListener('click', (e) => {
@@ -40,6 +47,8 @@ btnsTipNumber.forEach((btnTipNumber) =>
     // console.log(e.target.dataset.tip + " event target");
     // console.log(selectedTip + " selected TIP");
     console.log(selectedTip)
+    tip = true
+    console.log(tip)
     return selectedTip
   })
 )
@@ -48,9 +57,12 @@ const countTipCustom = function () {
   // if (tipNumberCustom.value > '100') {
 
   // }
-  selectedTip = tipNumberCustom.value;
+  selectedTip = parseInt(tipNumberCustom.value);
   console.log(selectedTip)
+  tip = true
+  console.log(tip)
   return selectedTip
+
 }
 
 
@@ -60,28 +72,46 @@ const countBill = function () {
   } else if (billNumber.value === '0') {
     console.log('not 0')
   }
+  bill = true
   console.log(billNumber.value)
-  return (billNumber.value)
+  console.log(bill)
+
+  billNum = parseInt(billNumber.value)
+  console.log(billNum)
+  return (billNum)
 }
+
+
+
+
+
 
 /**
  * Check whether people's number is legible
  */
 const countPeople = function () {
-  if (peopleNumber.value === '0') {
+  if (parseInt(peopleNumber.value) === 0) {
     warningMessage.classList.remove('alert__info--hidden')
     document.querySelector('.input--hidden').style.border = '3px solid #dc8f78'
   } else {
     warningMessage.classList.add('alert__info--hidden')
     document.querySelector('.input--hidden').style.border = '3px solid #a0e7df'
-    console.log(peopleNumber.value)
-    return (peopleNumber.value)
+    console.log(parseInt(peopleNumber.value))
+    people = true
+    peopleNum = parseInt(peopleNumber.value)
+    console.log(peopleNum)
+    return (peopleNum)
   }
 }
 
 
 
+
+
+
 function calculation() {
+  console.log(billNumber.value)
+  console.log(selectedTip)
   if (billNumber.value !== '' && selectedTip !== '' && peopleNumber.value === '') {
     console.log('no people')
     warningMessage.classList.remove('alert__info--hidden')
@@ -89,14 +119,24 @@ function calculation() {
   } else if (billNumber.value !== '' && selectedTip !== '' && peopleNumber.value !== '') {
     warningMessage.classList.add('alert__info--hidden')
     document.querySelector('.input--hidden').style.border = '3px solid #a0e7df'
-    // result1 = ((billNumber.value * (tip / 100)) / peopleNumber.value).toFixed(2);
+    result1 = ((billNumber.value * (tip / 100)) / peopleNumber.value).toFixed(2);
     console.log(billNumber.value)
     console.log(result1)
-    // personAmount.innerHTML = `${result1}`
+    personAmount.innerHTML = `$${result1}`
   }
   console.log('no people')
 }
 
+const checking = function () {
+  if (bill == true && tip == true && people == false) {
+    warningMessage.classList.remove('alert__info--hidden')
+    document.querySelector('.input--hidden').style.border = '3px solid #dc8f78'
+  } else if (bill === true && tip === true && people === true) {
+    warningMessage.classList.add('alert__info--hidden')
+    document.querySelector('.input--hidden').style.border = '3px solid #a0e7df'
+    calculation()
+  }
+}
 
 // function
 
