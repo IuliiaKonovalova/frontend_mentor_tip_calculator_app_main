@@ -155,6 +155,10 @@ input:focus {
   color: var(--clr-primary--900);
 }
 
+.btn:focus {
+  background-color: var(--clr-primary--700);
+}
+
 .tip__btns input:placeholder-shown {
   text-align: center;
 }
