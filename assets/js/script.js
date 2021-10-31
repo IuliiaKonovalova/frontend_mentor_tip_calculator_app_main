@@ -28,13 +28,14 @@ document.addEventListener('DOMContentLoaded', function () {
       selectedTip = Number.parseInt(e.target.dataset.tip);
       // console.log(e.target.dataset.tip + " event target");
       // console.log(selectedTip + " selected TIP");
+      tip = selectedTip
     })
   )
-
+  calculation()
 });
 
 const integer = /\d{1,}/;
-
+tip = 0
 
 let selectedTip = 0;
 
@@ -66,6 +67,11 @@ function countTipCustom() {
   if (tipNumberCustom.value > '100') {
 
   }
+  tip = tipNumberCustom.value
+}
+
+function calculation() {
+  return ((billNumber.value * (tip / 100)) / peopleNumber.value).toFixed(2);
 }
 
 function resetAll() {
