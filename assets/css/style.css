@@ -52,6 +52,9 @@ body {
   gap: 1.7rem;
   padding: 1.5rem;
   border-radius: var(--br);
+  box-shadow: 1px 2px 32px 6px rgba(0, 0, 0, 0.30);
+  -webkit-box-shadow: 1px 2px 32px 6px rgba(0, 0, 0, 0.30);
+  -moz-box-shadow: 1px 2px 32px 6px rgba(0, 0, 0, 0.30);
 }
 
 /* User Input */
