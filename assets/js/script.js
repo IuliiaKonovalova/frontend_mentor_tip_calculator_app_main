@@ -31,6 +31,8 @@ document.addEventListener('DOMContentLoaded', function () {
   tipButtons.forEach((item, i) => {
     item.addEventListener('click', () => {
       tipPercentage = 1 + Number(item.value);
+      item.style.backgroundColor = '#26c0ab';
+      item.style.color = '#00494d';
       customInput.value = '';
       totalAmount();
     })
