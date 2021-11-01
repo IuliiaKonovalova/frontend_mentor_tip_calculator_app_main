@@ -276,7 +276,7 @@ input:focus {
 /* Styling Credits section */
 
 .attribution {
-  font-size: 2vh;
+  font-size: 1rem;
   display: flex;
   flex-direction: column;
   text-align: center;
@@ -288,4 +288,21 @@ input:focus {
 
 .attribution>div a {
   color: hsl(228, 45%, 44%);
+}
+
+@media screen and (max-width: 997px) {
+  body {
+
+    height: unset;
+    margin: 1rem;
+  }
+
+  .logo {
+    margin: 2rem auto;
+  }
+
+  .container {
+    display: unset;
+  }
+
 }
