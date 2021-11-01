@@ -1,7 +1,6 @@
 // variables for inputs
 const billInput = document.querySelector('#bill__number');
 const tipButtons = document.querySelectorAll('.btn_tip');
-
 const customInput = document.querySelector('#tip__number_custom');
 const peopleInput = document.querySelector('#people_number');
 // variables for outputs
@@ -10,10 +9,12 @@ const finalAmountToPay = document.querySelector('#total__amount');
 // Variable for the reset button
 const resetButton = document.querySelector('#btn__reset');
 const warning = document.querySelector('#warning');
+
 // Temporarily variables
 let billAmountVariable = 0;
 let tipPercentage = 0;
 let numberOfPeople = 0;
+
 /**
  * Main function
  * Listens to the inputs of the user
@@ -41,30 +42,30 @@ document.addEventListener('DOMContentLoaded', function () {
  * Checks whether the user typed all inputs
  * Makes the calculations
  * Presents the data in the output
- *  
+ * Controls reset btn
  */
 let totalAmount = () => {
+  //Reminds user to set number of people
   if (billAmountVariable !== 0 && tipPercentage !== 0 && numberOfPeople === 0) {
-    console.log('error');
     warning.classList.remove('alert__info--hidden');
     document.querySelector('.input--hidden').style.border = '3px solid #dc8f78';
   } else if (billAmountVariable !== 0 && tipPercentage !== 0 && numberOfPeople !== 0) {
-    console.log('no error');
+    //Deletes warning message
     warning.classList.add('alert__info--hidden');
     document.querySelector('.input--hidden').style.border = '3px solid #a0e7df';
+    // Counts the amounts
     let total = ((billAmountVariable * tipPercentage) /
       numberOfPeople
     );
     let totalTip = total - (billAmountVariable / numberOfPeople);
-
+    // Present the amounts
     finalTipToPay.innerHTML = `$${totalTip.toFixed(2)}`;
     finalAmountToPay.innerHTML = `$${total.toFixed(2)}`;
-
+    // Activates the reset btn
     resetButton.addEventListener('click', resetAll);
     resetButton.style.backgroundColor = '#26c0ab';
   }
 }
-
 
 /**
  * Gets the value from th input bill
@@ -107,6 +108,9 @@ function showPeopleInputError(errorIndex) {
   }
 }
 
+/**
+ * 
+ */
 const resetAll = function () {
   tipButtons.forEach((item, i) => {
     item.checked = false;
