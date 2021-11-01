@@ -1,148 +1,108 @@
-//variables
+// variables for inputs
+const billInput = document.querySelector('#bill__number');
+const tipButtons = document.querySelectorAll('.btn_tip');
 
-const billNumber = document.querySelector('#bill__number');
-const tipNumberCustom = document.querySelector('#tip__number_custom');
-const btnsTipNumber = document.querySelectorAll('.btn_tip')
-const tipNumber5 = document.querySelector('#tip__number_5');
-const tipNumber10 = document.querySelector('#tip__number_10');
-const tipNumber15 = document.querySelector('#tip__number_15');
-const tipNumber25 = document.querySelector('#tip__number_25');
-const tipNumber50 = document.querySelector('#tip__number_50');
-const peopleNumber = document.querySelector('#people_number');
-const btnReset = document.querySelector('#btn__reset');
-
-const personAmount = document.querySelector('#person__amount');
-const totalAmount = document.querySelector('#total__amount')
-
-const warningMessage = document.querySelector('#warning')
-
-
+const customInput = document.querySelector('#tip__number_custom');
+const peopleInput = document.querySelector('#people_number');
+// variables for outputs
+const finalTipToPay = document.querySelector('#tip__amount');
+const finalAmountToPay = document.querySelector('#total__amount');
+// Variable for the reset button
+const resetButton = document.querySelector('#btn__reset');
+const warning = document.querySelector('#warning');
+// Temporarily variables
+let billAmountVariable = 0;
+let tipPercentage = 0;
+let numberOfPeople = 0;
+/**
+ * Main function
+ * Listens to the inputs of the user
+ */
 document.addEventListener('DOMContentLoaded', function () {
-  // Reset all inputs
-  resetAll();
-  // Event listeners for all buttons
-  billNumber.addEventListener('input', countBill);
-  tipNumberCustom.addEventListener('input', countTipCustom);
-  peopleNumber.addEventListener('input', countPeople);
-  btnReset.addEventListener('click', resetAll);
-  checking()
+  customInput.addEventListener('input', getCustomTipValue, 500);
+  billInput.addEventListener('input', getBillValue, 500);
+  peopleInput.addEventListener('input', getPeopleValue, 500);
+  customInput.addEventListener('input', () => {
+    tipButtons.forEach((item, i) => {
+      item.checked = false;
+    })
+  })
+  tipButtons.forEach((item, i) => {
+    item.addEventListener('click', () => {
+      tipPercentage = Number(item.value);
+      customInput.value = '';
+      totalAmountPersonCalculate();
+    })
+  });
+
 });
 
-const integer = /\d{1,}/;
+/**
+ * Checks whether the user typed all inputs
+ * Makes the calculations
+ * Presents the data in the output
+ *  
+ */
+let totalAmountPersonCalculate = () => {
+  if (billAmountVariable !== 0 && tipPercentage !== 0 && numberOfPeople === 0) {
+    console.log('error');
+    warning.classList.remove('alert__info--hidden');
+    document.querySelector('.input--hidden').style.border = '3px solid #dc8f78';
+  } else if (billAmountVariable !== 0 && tipPercentage !== 0 && numberOfPeople !== 0) {
+    console.log('no error');
+    warning.classList.add('alert__info--hidden');
+    document.querySelector('.input--hidden').style.border = '3px solid #a0e7df';
+    let total = ((billAmountVariable * tipPercentage) /
+      numberOfPeople
+    );
+    let totalTip = total - (billAmountVariable / numberOfPeople);
 
-let bill = false
-let people = false
-let tip = false
+    finalTipToPay.innerHTML = `$${totalTip.toFixed(2)}`;
+    finalAmountToPay.innerHTML = `$${total.toFixed(2)}`;
 
-let peopleNum = 0
-let tipNum = 0
-let billNum = 0
-
-let selectedTip = 0;
-
-btnsTipNumber.forEach((btnTipNumber) =>
-  btnTipNumber.addEventListener('click', (e) => {
-    e.preventDefault();
-    selectedTip = Number.parseInt(e.target.dataset.tip);
-    // console.log(e.target.dataset.tip + " event target");
-    // console.log(selectedTip + " selected TIP");
-    console.log(selectedTip)
-    tip = true
-    console.log(tip)
-    return selectedTip
-  })
-)
-
-const countTipCustom = function () {
-  // if (tipNumberCustom.value > '100') {
-
-  // }
-  selectedTip = parseInt(tipNumberCustom.value);
-  console.log(selectedTip)
-  tip = true
-  console.log(tip)
-  return selectedTip
-
-}
-
-
-const countBill = function () {
-  if (!integer.test(billNumber.value) && billNumber.value !== '0') {
-    console.log('hi')
-  } else if (billNumber.value === '0') {
-    console.log('not 0')
+    resetButton.addEventListener('click', resetAll);
+    resetButton.style.backgroundColor = '#26c0ab';
   }
-  bill = true
-  console.log(billNumber.value)
-  console.log(bill)
-
-  billNum = parseInt(billNumber.value)
-  console.log(billNum)
-  return (billNum)
 }
-
-
-
-
 
 
 /**
- * Check whether people's number is legible
+ * Gets the value from th input bill
  */
-const countPeople = function () {
-  if (parseInt(peopleNumber.value) === 0) {
-    warningMessage.classList.remove('alert__info--hidden')
-    document.querySelector('.input--hidden').style.border = '3px solid #dc8f78'
+let getBillValue = () => {
+  billAmountVariable = Number(billInput.value);
+  totalAmountPersonCalculate();
+}
+
+/**
+ * Gets the value from th input custom tip
+ */
+let getCustomTipValue = () => {
+  tipPercentage = Number(customInput.value) / 100;
+  totalAmountPersonCalculate();
+}
+
+/**
+ * Gets the value from th input people
+ */
+let getPeopleValue = () => {
+  numberOfPeople = Number(peopleInput.value);
+  if (numberOfPeople === 0) {
+    showPeopleInputError(0);
+  }
+  totalAmountPersonCalculate();
+}
+
+/**
+ * Displays a mistake message if the input in "number of people" is 0,
+ * Delete mistake if the input more than 0
+ */
+function showPeopleInputError(errorIndex) {
+  if (errorIndex === 0) {
+    warning.classList.remove('alert__info--hidden');
+    document.querySelector('.input--hidden').style.border = '3px solid #dc8f78';
   } else {
-    warningMessage.classList.add('alert__info--hidden')
-    document.querySelector('.input--hidden').style.border = '3px solid #a0e7df'
-    console.log(parseInt(peopleNumber.value))
-    people = true
-    peopleNum = parseInt(peopleNumber.value)
-    console.log(peopleNum)
-    return (peopleNum)
+    warning.classList.add('alert__info--hidden');
+    document.querySelector('.input--hidden').style.border = '3px solid #a0e7df';
   }
-}
-
-
-
-
-
-
-function calculation() {
-  console.log(billNumber.value)
-  console.log(selectedTip)
-  if (billNumber.value !== '' && selectedTip !== '' && peopleNumber.value === '') {
-    console.log('no people')
-    warningMessage.classList.remove('alert__info--hidden')
-    document.querySelector('.input--hidden').style.border = '3px solid #dc8f78'
-  } else if (billNumber.value !== '' && selectedTip !== '' && peopleNumber.value !== '') {
-    warningMessage.classList.add('alert__info--hidden')
-    document.querySelector('.input--hidden').style.border = '3px solid #a0e7df'
-    result1 = ((billNumber.value * (tip / 100)) / peopleNumber.value).toFixed(2);
-    console.log(billNumber.value)
-    console.log(result1)
-    personAmount.innerHTML = `$${result1}`
-  }
-  console.log('no people')
-}
-
-const checking = function () {
-  if (bill == true && tip == true && people == false) {
-    warningMessage.classList.remove('alert__info--hidden')
-    document.querySelector('.input--hidden').style.border = '3px solid #dc8f78'
-  } else if (bill === true && tip === true && people === true) {
-    warningMessage.classList.add('alert__info--hidden')
-    document.querySelector('.input--hidden').style.border = '3px solid #a0e7df'
-    calculation()
-  }
-}
-
-// function
-
-function resetAll() {
-  billNumber.value = '';
-  tipNumberCustom.value = '';
-  peopleNumber.value = '';
-  selectedTip = 0;
 }
