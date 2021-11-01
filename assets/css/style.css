@@ -41,7 +41,6 @@ body {
   justify-content: space-around;
   align-items: center;
   height: 100vh;
-  position: relative;
 }
 
 /* Calculator */
@@ -307,6 +306,20 @@ input:focus {
 }
 
 /* ---- Media ----*/
+
+@media screen and (max-height: 800px) {
+  body {
+    height: unset;
+  }
+
+  .logo {
+    margin: 2rem auto;
+  }
+
+  .attribution {
+    margin: 1rem;
+  }
+}
 
 @media screen and (max-width: 997px) {
   body {
