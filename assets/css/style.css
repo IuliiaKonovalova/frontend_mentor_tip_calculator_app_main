@@ -288,6 +288,14 @@ input:focus {
   text-transform: uppercase;
 }
 
+.btn--reset:hover {
+  background-color: unset;
+}
+
+.btn--reset:focus {
+  background-color: unset;
+}
+
 /* Styling Credits section */
 
 .attribution {

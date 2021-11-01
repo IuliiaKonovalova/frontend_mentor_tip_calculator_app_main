@@ -109,7 +109,7 @@ function showPeopleInputError(errorIndex) {
 }
 
 /**
- * 
+ * Resets all
  */
 const resetAll = function () {
   tipButtons.forEach((item, i) => {
