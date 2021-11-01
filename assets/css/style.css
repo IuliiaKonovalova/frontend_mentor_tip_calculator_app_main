@@ -236,12 +236,21 @@ input:focus {
   grid-row: 1/2;
 }
 
+
+
 .tip_result--total {
   grid-row: 2/3;
 }
 
 .tip_result {
   display: flex;
+  justify-content: space-between;
+  align-self: center;
+}
+
+.result {
+  display: flex;
+  flex-direction: column;
   justify-content: space-between;
   align-self: center;
 }
