@@ -38,7 +38,7 @@ body {
   font-family: var(--ff-primary);
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
   height: 100vh;
   position: relative;
@@ -193,9 +193,6 @@ input:focus {
   transform: translateY(-50%);
 }
 
-
-
-
 .people_number__info {
   grid-row: 3/4;
   display: flex;
@@ -204,14 +201,11 @@ input:focus {
   position: relative;
 }
 
+
+/* Warning message */
 .alert__info--hidden {
   display: none;
 }
-
-/* .input--hidden:hover {
-  border: 3px solid var(--clr-accent--100);
-} */
-
 
 .alert__info {
   position: absolute;
@@ -236,12 +230,11 @@ input:focus {
   grid-row: 1/2;
 }
 
-
-
 .tip_result--total {
   grid-row: 2/3;
 }
 
+/* Styling the displaying result*/
 .tip_result {
   display: flex;
   justify-content: space-between;
