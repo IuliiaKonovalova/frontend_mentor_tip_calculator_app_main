@@ -4,7 +4,7 @@
   --clr-primary--100: hsl(189, 41%, 97%);
   --clr-primary--300: hsl(185, 41%, 84%);
   --clr-primary--500: hsl(184, 14%, 56%);
-  --clr-primary--700: hsl(172, 67%, 45%);
+  --clr-primary--700: #26c0ab;
   --clr-primary--900: hsl(183, 100%, 15%);
   --clr-neutral--100: hsl(0, 0%, 100%);
   --clr-neutral--300: hsl(182, 17%, 67%);
@@ -157,6 +157,7 @@ input:focus {
 
 .btn:focus {
   background-color: var(--clr-primary--700);
+  color: var(--clr-primary--900);
 }
 
 .tip__btns input:placeholder-shown {
@@ -265,8 +266,4 @@ input:focus {
   width: 100%;
   color: var(--clr-primary--900);
   text-transform: uppercase;
-}
-
-.btn--reset:hover {
-  background-color: var(--clr-primary--700);
 }
