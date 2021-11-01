@@ -31,7 +31,7 @@ document.addEventListener('DOMContentLoaded', function () {
     item.addEventListener('click', () => {
       tipPercentage = Number(item.value);
       customInput.value = '';
-      totalAmountPersonCalculate();
+      totalAmount();
     })
   });
 
@@ -43,7 +43,7 @@ document.addEventListener('DOMContentLoaded', function () {
  * Presents the data in the output
  *  
  */
-let totalAmountPersonCalculate = () => {
+let totalAmount = () => {
   if (billAmountVariable !== 0 && tipPercentage !== 0 && numberOfPeople === 0) {
     console.log('error');
     warning.classList.remove('alert__info--hidden');
@@ -71,7 +71,7 @@ let totalAmountPersonCalculate = () => {
  */
 let getBillValue = () => {
   billAmountVariable = Number(billInput.value);
-  totalAmountPersonCalculate();
+  totalAmount();
 }
 
 /**
@@ -79,7 +79,7 @@ let getBillValue = () => {
  */
 let getCustomTipValue = () => {
   tipPercentage = Number(customInput.value) / 100;
-  totalAmountPersonCalculate();
+  totalAmount();
 }
 
 /**
@@ -90,7 +90,7 @@ let getPeopleValue = () => {
   if (numberOfPeople === 0) {
     showPeopleInputError(0);
   }
-  totalAmountPersonCalculate();
+  totalAmount();
 }
 
 /**
@@ -105,4 +105,19 @@ function showPeopleInputError(errorIndex) {
     warning.classList.add('alert__info--hidden');
     document.querySelector('.input--hidden').style.border = '3px solid #a0e7df';
   }
+}
+
+const resetAll = function () {
+  tipButtons.forEach((item, i) => {
+    item.checked = false;
+  });
+  billAmountVariable = 0;
+  tipPercentage = 0;
+  numberOfPeople = 0;
+  billInput.value = '';
+  peopleInput.value = '';
+  customInput.value = '';
+  finalTipToPay.innerHTML = '$0.00';
+  finalAmountToPay.innerHTML = '$0.00';
+  resetButton.style.backgroundColor = '#0d686d';
 }
