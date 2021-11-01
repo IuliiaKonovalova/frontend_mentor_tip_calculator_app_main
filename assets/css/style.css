@@ -321,6 +321,11 @@ input:focus {
   .container {
     display: unset;
   }
+
+  .user__output {
+    margin-top: 1rem;
+  }
+
 }
 
 @media screen and (max-width: 535px) {
@@ -341,17 +346,19 @@ input:focus {
   .sum__result {
     font-size: 2.5rem;
   }
+
+  .alert__info {
+    position: absolute;
+    right: 0;
+    top: 5%;
+  }
 }
 
-@media screen and (max-width: 405px) {
+@media screen and (max-width: 415px) {
 
   body {
     background-color: wheat;
   }
-
-  /* .container {
-    justify-content: space-between;
-  } */
 
   .user__input {
     padding: 0.5rem;
@@ -369,6 +376,12 @@ input:focus {
 
   .sum__result {
     font-size: 1.5rem;
+  }
+
+  .alert__info {
+    position: absolute;
+    right: 0;
+    top: 25%;
   }
 }
 
