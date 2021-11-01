@@ -326,6 +326,9 @@ input:focus {
     margin-top: 1rem;
   }
 
+  .attribution {
+    margin: 1rem;
+  }
 }
 
 @media screen and (max-width: 535px) {
@@ -355,11 +358,6 @@ input:focus {
 }
 
 @media screen and (max-width: 415px) {
-
-  body {
-    background-color: wheat;
-  }
-
   .user__input {
     padding: 0.5rem;
     gap: 1.5rem;
@@ -386,11 +384,6 @@ input:focus {
 }
 
 @media screen and (max-width: 329px) {
-
-  body {
-    background-color: palevioletred;
-  }
-
   .btn {
     font-size: 1.5rem;
   }
@@ -417,5 +410,4 @@ input:focus {
     flex-direction: row;
     font-size: 0.7rem;
   }
-
 }
