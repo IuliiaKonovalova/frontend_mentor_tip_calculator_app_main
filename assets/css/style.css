@@ -272,3 +272,20 @@ input:focus {
   color: var(--clr-primary--900);
   text-transform: uppercase;
 }
+
+/* Styling Credits section */
+
+.attribution {
+  font-size: 2vh;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.attribution>div {
+  letter-spacing: 0.02rem;
+}
+
+.attribution>div a {
+  color: hsl(228, 45%, 44%);
+}
