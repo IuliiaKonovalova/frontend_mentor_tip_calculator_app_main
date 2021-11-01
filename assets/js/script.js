@@ -30,7 +30,7 @@ document.addEventListener('DOMContentLoaded', function () {
   })
   tipButtons.forEach((item, i) => {
     item.addEventListener('click', () => {
-      tipPercentage = Number(item.value);
+      tipPercentage = 1 + Number(item.value);
       customInput.value = '';
       totalAmount();
     })
@@ -79,7 +79,7 @@ let getBillValue = () => {
  * Gets the value from th input custom tip
  */
 let getCustomTipValue = () => {
-  tipPercentage = Number(customInput.value) / 100;
+  tipPercentage = 1 + Number(customInput.value) / 100;
   totalAmount();
 }
 
