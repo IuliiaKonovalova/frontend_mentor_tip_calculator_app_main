@@ -324,20 +324,6 @@ input:focus {
 }
 
 @media screen and (max-width: 535px) {
-  /* body {
-    background-color: wheat;
-    height: unset;
-    margin: 1rem;
-  }
-
-  .logo {
-    margin: 2rem auto;
-  }
-
-  .container {
-    display: unset;
-  } */
-
   .tip__btns {
     display: grid;
     grid-template-columns: repeat(2, minmax(2rem, 1fr));
@@ -345,19 +331,14 @@ input:focus {
   }
 
   .btn {
-    background-color: var(--clr-primary--900);
     width: 100%;
-    padding: 0.22rem;
-    color: var(--clr-neutral--100);
-    font-weight: 600;
-    font-size: 1.7rem;
-    font-family: var(--ff-primary);
-    border-radius: 0.2em;
-    border: none
   }
 
   input {
     width: 100%;
   }
 
+  .sum__result {
+    font-size: 2.5rem;
+  }
 }
