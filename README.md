@@ -72,28 +72,43 @@ The solution to this challenge can be accessed by this [link](https://iuliiakono
 
         * Has the payment calculator.
 
-        ![Input part](documentation/app_features/input_part.png)
+    #### Input Part
+    ---
 
-        * Has input bill, 5 tip buttons and 1 custom tip input, and number of people input.
+    ![Input part](documentation/app_features/input_part.png)
 
-        * App takes only numbers as on inputs.
+    * Has input bill, 5 tip buttons and 1 custom tip input, and number of people input.
 
-        * When the user picks a tip button it becomes visible to the user by changing the colors; and if the user picks another tip button, it returns the previous button to initial state and changes the colors of a new tip button.
+    * App takes only numbers as on inputs.
 
-        ![Tips Buttons](documentation/app_features/tips_buttons.png)
+    * When the user picks a tip button it becomes visible to the user by changing the colors; and if the user picks another tip button, it returns the previous button to initial state and changes the colors of a new tip button.
 
-        * If the user decides to user Custom input after clicking tip buttons, all tip buttons will return to initial state as well.
+    ![Tips Buttons](documentation/app_features/tips_buttons.png)
 
-        ![Custom Tip](documentation/app_features/custom_tip.png)
+    * If the user decides to user Custom input after clicking tip buttons, all tip buttons will return to initial state as well.
 
-        * When the user types the bill amount and picks needed amount of tip, a warning message will appear to remind th user to type the number of people included in the bill.
+    ![Custom Tip](documentation/app_features/custom_tip.png)
 
-        ![Warning Message on empty input](documentation/app_features/warning_1.png)
+    * When the user types the bill amount and picks needed amount of tip, a warning message will appear to remind th user to type the number of people included in the bill.
 
-        * This message will also appear when the user types "0" in Number of People input.
-        
-        ![Warning Message on '0' input](documentation/app_features/warning_2.png)
+    ![Warning Message on empty input](documentation/app_features/warning_1.png)
 
+    * This message will also appear when the user types "0" in Number of People input.
+
+    ![Warning Message on '0' input](documentation/app_features/warning_2.png)
+
+    #### Output Part
+    ---
+
+    ![Input part](documentation/app_features/output_part.png)
+
+    * This block presents results of the calculations if all fields are filled out.
+
+    * It shows Tip Amount for an individual and Total Sum for an individual according to the number of people paying for the bill.
+
+    * It has a reset button, which which is active when the calculations have been done. It resets all inputs.
+
+    ![Reset Button](documentation/app_features/reset_button.png)
 
 
 
