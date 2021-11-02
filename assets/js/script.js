@@ -37,7 +37,7 @@ document.addEventListener('DOMContentLoaded', function () {
         item.style.backgroundColor = '#00494d';
         item.style.color = '#ffffff';
       })
-      tipPercentage = 1 + Number(item.value);
+      tipPercentage = Number(item.value);
 
       customInput.value = '';
       totalAmount();
@@ -65,10 +65,9 @@ let totalAmount = () => {
     warning.classList.add('alert__info--hidden');
     document.querySelector('.input--hidden').style.border = '3px solid #a0e7df';
     // Counts the amounts
-    let total = ((billAmountVariable * tipPercentage) /
-      numberOfPeople
-    );
-    let totalTip = total - (billAmountVariable / numberOfPeople);
+
+    let total = (billAmountVariable * tipPercentage) / numberOfPeople;
+    let totalTip = ((billAmountVariable * tipPercentage) - billAmountVariable) / numberOfPeople;
     // Present the amounts
     finalTipToPay.innerHTML = `$${totalTip.toFixed(2)}`;
     finalAmountToPay.innerHTML = `$${total.toFixed(2)}`;
@@ -82,7 +81,7 @@ let totalAmount = () => {
  * Gets the value from th input bill
  */
 let getBillValue = () => {
-  billAmountVariable = 1 + Number(billInput.value);
+  billAmountVariable = Number(billInput.value);
   totalAmount();
 }
 
@@ -90,7 +89,7 @@ let getBillValue = () => {
  * Gets the value from th input custom tip
  */
 let getCustomTipValue = () => {
-  tipPercentage = 1 + Number(customInput.value) / 100;
+  tipPercentage = Number(customInput.value);
   totalAmount();
 }
 
