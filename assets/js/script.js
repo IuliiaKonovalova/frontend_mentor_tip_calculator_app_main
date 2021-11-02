@@ -35,7 +35,7 @@ document.addEventListener('DOMContentLoaded', function () {
     item.addEventListener('click', () => {
       tipButtons.forEach((item) => {
         item.style.backgroundColor = '#00494d';
-        tem.style.color = '#ffffff';
+        item.style.color = '#ffffff';
       })
       tipPercentage = 1 + Number(item.value);
 
@@ -82,7 +82,7 @@ let totalAmount = () => {
  * Gets the value from th input bill
  */
 let getBillValue = () => {
-  billAmountVariable = Number(billInput.value);
+  billAmountVariable = 1 + Number(billInput.value);
   totalAmount();
 }
 
