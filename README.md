@@ -121,6 +121,11 @@ The solution to this challenge can be accessed by this [link](https://iuliiakono
 - [CSS roots](https://developer.mozilla.org/en-US/docs/Web/CSS/:root) - was used to declaring global CSS variables and apply them throughout the project. 
 - [JS](https://www.javascript.com/) - was used to make calculations and display content on the page.
 - [JavaScript HTML DOM](https://www.w3schools.com/js/js_htmldom.asp) - was used to access and manipulate elements in html file.
+- [VSCode](https://code.visualstudio.com/) - was used as the main tool to write and edit code.
+- [Git](https://git-scm.com/) - was used for the version control of the website.
+- [GitHub](https://github.com/) - was used to host the code of the website.
+- [GIMP](https://www.gimp.org/) - was used to make and resize images for the README file.
+
 
 
 
