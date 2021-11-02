@@ -28,13 +28,22 @@ document.addEventListener('DOMContentLoaded', function () {
       item.checked = false;
     })
   })
+
   tipButtons.forEach((item, i) => {
+    // item.style.backgroundColor = 'red';
+    // item.style.color = '#00494d';
     item.addEventListener('click', () => {
+      tipButtons.forEach((item) => {
+        item.style.backgroundColor = '#00494d';
+        tem.style.color = '#ffffff';
+      })
       tipPercentage = 1 + Number(item.value);
-      item.style.backgroundColor = '#26c0ab';
-      item.style.color = '#00494d';
+
       customInput.value = '';
       totalAmount();
+      item.style.backgroundColor = '#26c0ab';
+      item.style.color = '#00494d';
+
     })
   });
 
