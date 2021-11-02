@@ -20,9 +20,9 @@ let numberOfPeople = 0;
  * Listens to the inputs of the user
  */
 document.addEventListener('DOMContentLoaded', function () {
-  customInput.addEventListener('input', getCustomTipValue, 500);
-  billInput.addEventListener('input', getBillValue, 500);
-  peopleInput.addEventListener('input', getPeopleValue, 500);
+  customInput.addEventListener('input', getCustomTipValue);
+  billInput.addEventListener('input', getBillValue);
+  peopleInput.addEventListener('input', getPeopleValue);
   customInput.addEventListener('input', () => {
     tipButtons.forEach((item, i) => {
       item.checked = false;

@@ -1,13 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap');
 
 :root {
-  --clr-primary--100: hsl(189, 41%, 97%);
-  --clr-primary--300: hsl(185, 41%, 84%);
-  --clr-primary--500: hsl(184, 14%, 56%);
+  --clr-primary--100: #f4fafa;
+  --clr-primary--300: #c5e4e7;
+  --clr-primary--500: #7f9c9f;
   --clr-primary--700: #26c0ab;
-  --clr-primary--900: hsl(183, 100%, 15%);
-  --clr-neutral--100: hsl(0, 0%, 100%);
-  --clr-neutral--300: hsl(182, 17%, 67%);
+  --clr-primary--900: #00494d;
+  --clr-neutral--100: #ffffff;
+  --clr-neutral--300: #9db8b9;
   --clr-accent--100: #dc8f78;
   --ff-primary: 'Space Mono', monospace;
   --br: 1em;
@@ -130,7 +130,7 @@ input:placeholder-shown {
 }
 
 input:not(:placeholder-shown) {
-  color: hsl(183, 100%, 15%);
+  color: #00494d;
   font-weight: 700;
 }
 
@@ -413,12 +413,14 @@ input:focus {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    margin-bottom: 5rem;
 
   }
 
   .sum__result {
     font-size: 1.5rem;
     text-align: center;
+    margin-bottom: 1rem;
   }
 
   .tip_result {
