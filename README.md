@@ -126,7 +126,24 @@ The solution to this challenge can be accessed by this [link](https://iuliiakono
 - [GitHub](https://github.com/) - was used to host the code of the website.
 - [GIMP](https://www.gimp.org/) - was used to make and resize images for the README file.
 
+---
+## Design
 
+- The color scheme and font-family were provided by [Frontend Mentor](https://www.frontendmentor.io).
+
+- Background Color:
+
+![Background Color](documentation/design/background_color.png)
+
+- Cards Background Color:
+
+![Cards Background Color](documentation/design/card_background_color.png)
+
+
+
+- Font-family (Space Mono):
+
+![Font](documentation/design/font_family_rubik.png)
 
 
 ## Welcome! 👋
