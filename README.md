@@ -1,6 +1,16 @@
 # Frontend Mentor - Tip calculator app
 
+
+The project was based on the challenge provided by [Frontend Mentor](https://www.frontendmentor.io).
+
+
+
+This is a solution to the [Time tracking dashboard challenge on Frontend Mentor](https://iuliiakonovalova.github.io/frontend_mentor_tip_calculator_app_main/). 
+
+## The design provided
+
 ![Design preview for the Tip calculator app coding challenge](documentation/design/desktop-preview.jpg)
+
 
 ## Welcome! 👋
 
