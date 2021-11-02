@@ -89,7 +89,12 @@ let getBillValue = () => {
  * Gets the value from th input custom tip
  */
 let getCustomTipValue = () => {
-  tipPercentage = Number(customInput.value);
+  tipPercentage = Number(customInput.value) / 100 + 1;
+  tipButtons.forEach((item, i) => {
+    item.style.backgroundColor = '#00494d';
+    item.style.color = '#ffffff';
+  })
+
   totalAmount();
 }
 
