@@ -41,10 +41,11 @@ body {
   justify-content: space-around;
   align-items: center;
   height: 100vh;
+  position: relative;
 }
 
 .logo {
-  margin-top: 15rem;
+  padding-top: 15rem;
 }
 
 /* Calculator */

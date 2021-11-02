@@ -11,6 +11,21 @@ This is a solution to the [Time tracking dashboard challenge on Frontend Mentor]
 
 ![Design preview for the Tip calculator app coding challenge](documentation/design/desktop-preview.jpg)
 
+## Table of contents
+
+- [User Stories](#user-stories)
+- [Features](#features)
+- [Technologies Used](#technologies-used)
+- [Design](#design)
+- [Bugs](#bugs)
+- [Testing](#testing)
+  - [Compatibility](#compatibility)
+  - [Validator testing](#validator-testing)
+  - [Lighthouse Report](#lighthouse-report)
+- [Deployment](#deployment)
+- [Author](#author)
+- [Credits](#credits)
+- [Acknowledgments](#acknowledgments)
 
 ## Welcome! 👋
 
