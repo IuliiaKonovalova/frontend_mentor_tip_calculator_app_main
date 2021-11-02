@@ -50,6 +50,50 @@ The solution to this challenge can be accessed by this [link](https://iuliiakono
 * As a Frequent User, I want to be able always access the app, so I can count the tips every now and then.
 * As a Frequent User, I want to have different options for input, so I can get the required numbers of payment.
 
+
+---
+
+## Features
+
++ ### Main Page
+
+    - Represent: 
+
+        * the payments calculator.
+        ![Main Page](documentation/app_features/main_page.png)
+
+    - Consist:
+
+        ![Main Page](documentation/app_features/logo.png)
+
+        * Logo of the app.
+
+        ![Main Card](documentation/app_features/main_card.png)
+
+        * Has the main card with personal information for the user.
+
+        ![Personal Information](documentation/app_features/main_card_personal_info.png)
+
+        * Has three buttons under personal information card which allows the user to peek the time duration.
+
+        ![Time Options](documentation/app_features/main_card_time_options.png)
+
+        * Has six cards: work, study, play, exercise, social and sef-care, which allows the user to track the time spending on those activities during a day, a week , and a month.
+
+        ![Cards](documentation/app_features/report_cards.png)
+
+        * These cards also show the time that had been spent recently on those activities and the time that had been spend the day before, a week before, and a month before.
+
+        ![Cards](documentation/app_features/time_card.png)
+
+        * Has a link to [Frontend Mentor](https://www.frontendmentor.io) website, which provided all images and required design as well as the link to my github account [Iuliia Konovalova](https://github.com/IuliiaKonovalova)
+
+        ![Credits](documentation/app_features/footer.png)
+
+
+
+
+
 ## Welcome! 👋
 
 Thanks for checking out this front-end coding challenge.
