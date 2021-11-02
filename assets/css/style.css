@@ -326,6 +326,7 @@ input:focus {
   }
 
   .logo {
+    padding-top: 0;
     margin: 2rem auto;
   }
 
@@ -341,6 +342,7 @@ input:focus {
   }
 
   .logo {
+    padding-top: 2rem;
     margin: 2rem auto;
   }
 
