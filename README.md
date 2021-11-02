@@ -36,6 +36,20 @@ The solution to this challenge can be accessed by this [link](https://iuliiakono
 
 ![Responsive Mockup](documentation/responsive_mockup.png)
 
+
+---
+## User Stories
+
+### First Time Visitor Goals:
+
+* As a First Time Visitor, I want to easily understand the main purpose of the app, so I can learn more about this app.
+* As a First Time Visitor, I want to be able to easily navigate through the app, so I can find the content.
+* As a First Time Visitor, I want to find the app useful.
+
+### Frequent Visitor Goals:
+* As a Frequent User, I want to be able always access the app, so I can count the tips every now and then.
+* As a Frequent User, I want to have different options for input, so I can get the required numbers of payment.
+
 ## Welcome! 👋
 
 Thanks for checking out this front-end coding challenge.
