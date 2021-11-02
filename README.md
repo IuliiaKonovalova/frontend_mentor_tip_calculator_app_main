@@ -143,7 +143,7 @@ The solution to this challenge can be accessed by this [link](https://iuliiakono
 
 - Font-family (Space Mono):
 
-![Font](documentation/design/font_family_rubik.png)
+![Font](documentation/design/font_family.png)
 
 
 ## Welcome! 👋
