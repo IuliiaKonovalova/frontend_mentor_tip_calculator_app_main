@@ -43,6 +43,10 @@ body {
   height: 100vh;
 }
 
+.logo {
+  margin-top: 5rem;
+}
+
 /* Calculator */
 .container {
   background-color: var(--clr-neutral--100);
