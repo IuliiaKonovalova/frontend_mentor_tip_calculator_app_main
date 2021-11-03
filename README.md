@@ -137,9 +137,23 @@ The solution to this challenge can be accessed by this [link](https://iuliiakono
 
 - Cards Background Color:
 
-![Cards Background Color](documentation/design/card_background_color.png)
+![Card Background Color](documentation/design/card_background_color.png)
 
+- Input Background Color:
 
+![Input Background Color](documentation/design/input_background_color.png)
+
+- Accent Color 1:
+
+![Accent Color 1](documentation/design/accent_color_1.png)
+
+- Accent Color 2:
+
+![Accent Color 2](documentation/design/accent_color_2.png)
+
+- Warning Message Color:
+
+![Warning Message Color](documentation/design/warning_message_color.png)
 
 - Font-family (Space Mono):
 
