@@ -26,8 +26,8 @@ document.addEventListener('DOMContentLoaded', function () {
   customInput.addEventListener('input', () => {
     tipButtons.forEach((item, i) => {
       item.checked = false;
-    })
-  })
+    });
+  });
 
   tipButtons.forEach((item, i) => {
     // item.style.backgroundColor = 'red';
@@ -36,15 +36,13 @@ document.addEventListener('DOMContentLoaded', function () {
       tipButtons.forEach((item) => {
         item.style.backgroundColor = '#00494d';
         item.style.color = '#ffffff';
-      })
+      });
       tipPercentage = Number(item.value);
-
       customInput.value = '';
       totalAmount();
       item.style.backgroundColor = '#26c0ab';
       item.style.color = '#00494d';
-
-    })
+    });
   });
 
 });
@@ -75,7 +73,7 @@ let totalAmount = () => {
     resetButton.addEventListener('click', resetAll);
     resetButton.style.backgroundColor = '#26c0ab';
   }
-}
+};
 
 /**
  * Gets the value from th input bill
@@ -83,7 +81,7 @@ let totalAmount = () => {
 let getBillValue = () => {
   billAmountVariable = Number(billInput.value);
   totalAmount();
-}
+};
 
 /**
  * Gets the value from th input custom tip
@@ -93,10 +91,10 @@ let getCustomTipValue = () => {
   tipButtons.forEach((item, i) => {
     item.style.backgroundColor = '#00494d';
     item.style.color = '#ffffff';
-  })
+  });
 
   totalAmount();
-}
+};
 
 /**
  * Gets the value from th input people
@@ -107,7 +105,7 @@ let getPeopleValue = () => {
     showPeopleInputError(0);
   }
   totalAmount();
-}
+};
 
 /**
  * Displays a mistake message if the input in "number of people" is 0,
@@ -139,4 +137,4 @@ const resetAll = function () {
   finalTipToPay.innerHTML = '$0.00';
   finalAmountToPay.innerHTML = '$0.00';
   resetButton.style.backgroundColor = '#0d686d';
-}
+};
