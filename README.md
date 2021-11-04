@@ -220,7 +220,7 @@ The solution to this challenge can be accessed by this [link](https://iuliiakono
 
   - Chrome:
 
-  ![Main Page](documentation/compatibility/browser_chrome_tip_calculator.png.png)
+  ![Main Page](documentation/compatibility/browser_chrome_tip_calculator.png)
   
   - Firefox:
 
