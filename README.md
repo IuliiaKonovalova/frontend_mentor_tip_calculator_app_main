@@ -179,7 +179,34 @@ The solution to this challenge can be accessed by this [link](https://iuliiakono
       totalAmount();
     };
     ```
+1. The app was counting results right after the input
+    - *Solutions:* Add if-else statement to main function which calculates the results.
     
+    ```javascript
+    let totalAmount = () => {
+      //Reminds user to set number of people
+      if (billAmountVariable !== 0 && tipPercentage !== 0 && numberOfPeople === 0) {
+        warning.classList.remove('alert__info--hidden');
+        document.querySelector('.input--hidden').style.border = '3px solid #dc8f78';
+      } else if (billAmountVariable !== 0 && tipPercentage !== 0 && numberOfPeople !== 0) {
+        //Deletes warning message
+        warning.classList.add('alert__info--hidden');
+        document.querySelector('.input--hidden').style.border = '3px solid #a0e7df';
+        // Counts the amounts
+
+        let total = (billAmountVariable * tipPercentage) / numberOfPeople;
+        let totalTip = ((billAmountVariable * tipPercentage) - billAmountVariable) / numberOfPeople;
+        // Present the amounts
+        finalTipToPay.innerHTML = `$${totalTip.toFixed(2)}`;
+        finalAmountToPay.innerHTML = `$${total.toFixed(2)}`;
+        // Activates the reset btn
+        resetButton.addEventListener('click', resetAll);
+        resetButton.style.backgroundColor = '#26c0ab';
+      }
+    };
+    ```
+
+
 + **Unsolved bugs**
 
     - None.
