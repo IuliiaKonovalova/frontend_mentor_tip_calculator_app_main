@@ -159,3 +159,29 @@ The solution to this challenge can be accessed by this [link](https://iuliiakono
 
 ![Font](documentation/design/font_family.png)
 
+---
+
+## Bugs
++ **Solved bugs**
+
+1. The colors of the tip buttons did not change to initial state after choosing Custom Input
+
+    - *Solutions:* Add code to ```getCustomTipValue()```.
+    
+    ```javascript
+    let getCustomTipValue = () => {
+      tipPercentage = Number(customInput.value) / 100 + 1;
+      tipButtons.forEach((item, i) => {
+        item.style.backgroundColor = '#00494d';
+        item.style.color = '#ffffff';
+      });
+
+      totalAmount();
+    };
+    ```
+    
++ **Unsolved bugs**
+
+    - None.
+
+---
