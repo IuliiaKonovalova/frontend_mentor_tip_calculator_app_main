@@ -229,3 +229,7 @@ The solution to this challenge can be accessed by this [link](https://iuliiakono
   - Brave:
 
   ![Main Page](documentation/compatibility/browser_brave_tip_calculator.png)
+
+
+
++ The app was checked by devtools implemented on Firefox and Chrome browsers.
