@@ -330,3 +330,12 @@ In your IDE Terminal, type the following command to clone my repository:
 + ### Font
 
   - [Google Fonts](https://fonts.google.com/) was usd in order to implement required font.
+
+## Acknowledgement
+
+  - [Frontend Mentor](https://www.frontendmentor.io) for inspiring to improve my skills.
+  
+---
+
+
+---
