@@ -258,3 +258,25 @@ The solution to this challenge can be accessed by this [link](https://iuliiakono
 + The functionality of the links in the app was checked as well by different users.
 
 ---
+### Validator testing
++ #### HTML
+  
+  - No errors or warnings were found when passing through the official [W3C](https://validator.w3.org/) validator.
+  
+    - Main Page:
+  
+    ![Main Page HTML Validator](documentation/validators/validator_html.png)
++ #### CSS
+  
+  - No errors or warnings were found when passing through the official [W3C (Jigsaw)](https://jigsaw.w3.org/css-validator/#validate_by_uri) validator except the 3 warnings: 
+
+  ![CSS Validator Errors](documentation/validators/validator_css.png)
+
+  ![CSS Validator Warnings](documentation/validators_testing/validator_css_warnings.png)
++ #### JS
+  
+  - No errors or warnings were found when passing through the official [JSHint](https://jshint.com/) validator except the warnings that pointing at the use of webkits 
+
+  ![JSHint Validator Main Page](documentation/validators/validator_js.png)
+
+---
